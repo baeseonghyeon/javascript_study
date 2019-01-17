@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    #count {
+      display:inline-block
+    }
+    .insertContainer h3 {display:inline-block;}
+  </style>
+</head>
+
+<body>
+    <h1>
+      Practice 1 : 장바구니를 추가해보자 
+    </h1>
+    <hr/>
+    <div>
+      <!-- count의 숫자는 항상 list안으 요소의 갯수와 같아야한다 -->
+      <h2>현재 장바구니 갯수 : <p id='count'>3</p></h2>
+      <ul id="list">
+        <li>사과</li>
+        <li>두리안</li>
+        <li>망고</li>
+      </ul>
+      <!-- 가장 앞에 있는 요소를 삭제한다 -->
+      <button id='btnRemove' type='button' onclick='remove()'>remove</button>
+      <div class='insertContainer'>
+        <h3>추가 할 항목 : </h3>
+        <input id='txtItem' type='text'/>
+        <!-- list에 txtItem의 내용을 추가한다 -->
+        <button id='btnInsert' type='button' onclick='insert()'>추가하기</button>
+      </div>
+    </div>
+    <script>
+      function insert(){
+        // txtItem의 내용을 list의 자식 요소로 추가한다 
+        // 추가 후에는 count의 내용이 현재 list의 갯수를 출력하도록 한다.
+        // 심화 : txtItem의 내용이 비어있을 때는 작동하지 않게 해보자 
+      }
+      function remove(){
+        // list의 하위 요소를 맨 앞부터 삭제한다 
+        // 삭제 후에는 count의 내용이 현재 list의 갯수를 출력하도록 한다.
+        // 심화 : list의 하위 요소가 비어있을때는 삭제되지 않도록 해보자
+      }
+    </script>
+</body>
+
+</html>
