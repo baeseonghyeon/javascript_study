@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+</head>
+
+<body>
+
+  <h1 id='head1'>Jello World!</h1>
+  <h1 class='head1'>Jello!</h1>
+  <div id='elem'>
+      <p id='item'>World!</p>
+  </div>
+
+  <script type='text/javascript'>
+    // 1. "head1"의 내용을 바꾸기 
+    document.getElementById("head1").innerText = "Hello World!";
+    document.getElementsByClassName("head1")[0].innerText = "Hello!!";
+
+    // 2. 요소를 생성하기
+    var elem = document.getElementById("elem");
+    
+    var createdElem = document.createElement("h1");
+    createdElem.innerText = "Jello!";
+    elem.append(createdElem);
+
+    // 3. 요소를 삭제하기
+    for(var i = 0 ; i < elem.children.length ; i++){
+        var item = elem.children[i];
+        if(item.innerText === "World!"){
+            item.remove();
+        }
+    } 
+  </script>
+</body>
+
+</html>

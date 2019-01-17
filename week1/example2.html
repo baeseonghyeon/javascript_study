@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #elem{
+            height : 50px;
+            font-size : 1.3em;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <button type='button' id='btn1' onclick='func1()'>
+        Click me
+    </button>
+    <br/>
+    <input type='text' id='elem'/>
+    <button type='button' id='btn2' onclick='func2()'>show me</button>
+    <script type='text/javascript'>
+        // 1. 클릭시 실행되는 함수 
+        function func1(){
+            // 알림창 띄우기 
+            alert("Hello!");
+        }
+
+        // 2. 클릭시 요소의 내용을 alert으로 띄우기 
+        function func2(){
+            console.log(document.getElementById("elem"))
+
+            // innerText가 아닌 value임에 주의 
+            alert(document.getElementById("elem").value);
+        }
+    </script>
+</body>
+
+</html>

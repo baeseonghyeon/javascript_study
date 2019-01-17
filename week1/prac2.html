@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <table id='tblList'>
+        <thead>
+            <tr>
+                <th>학과</th>
+                <th>이름</th>
+                <th>학년</th>
+                <th>삭제</th>
+            </tr>
+        </thead>
+        <tbody >
+            <tr>
+                <td>컴퓨터학부</td>
+                <td>강다니엘</td>
+                <td>4</td>
+                <td>
+                    <button type='button' onclick='remove(this)'>삭제</button>
+                </td>
+            </tr>
+            <tr>
+                <td>컴퓨터학부</td>
+                <td>김슬기</td>
+                <td>4</td>
+                <td>
+                    <button type='button' onclick='remove(this)'>삭제</button>
+                </td>
+            </tr>
+            <tr>
+                <td>컴퓨터학부</td>
+                <td>하연수</td>
+                <td>4</td>
+                <td>
+                    <button type='button' onclick='remove(this)'>삭제</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <h4>#추가하기</h4>
+        <input id='txtMaj' type='text' placeholder='학과'/>
+        <input id='txtName' type='text' placeholder='이름'/>
+        <input id='txtDeg' type='number' placeholder='학년'/>
+        <button type='button' onclick='insert()'>추가</button>
+    </div>
+    <script type='text/javascript'>
+        function insert(){
+            // ## 추가 버튼을 클릭하면
+            // 1. 학과, 이름, 학년이 비어있지 않은지 확인합니다
+            // 2. 모두 정상일 경우 tblList의 tbody에 학과,이름,학년을 추가합니다 
+            //    이때 삭제 버튼도 추가해야합니다. 내용은 기존의 항목을 참조합시다
+            // 3. 삭제 버튼의 onclick내용은 setAttribute함수로 추가할 수 있습니다. 
+        }
+        function remove(target){
+            // ## 삭제 버튼을 클릭하면 
+            // 현재 행을 삭제합니다. 
+            // 현재 요소의 부모요소는 parentElement로 접근할 수 있습니다.
+        }
+    </script>
+</body>
+
+</html>
