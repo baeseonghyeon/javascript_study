@@ -13,12 +13,16 @@
 ## week 1  -- 진행완료
 1. JAVASCRIPT? BACKEND? FRONTEND? 
 2. HTML + javascript
+
 2.1. DOM 다루기
+
 2.2. onclick
 
 ## week 2  
 1. HTML + javascript 2
+
 1.1. DOM 다루기 , this
+
 1.2. event 객체
 2. Javascript 파일 나누기
 3. 외부 자바스크립트 사용하기
