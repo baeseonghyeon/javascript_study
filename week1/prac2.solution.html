@@ -61,7 +61,7 @@
             var txtMaj = document.getElementById("txtMaj");
             var txtName = document.getElementById("txtName");
             var txtDeg = document.getElementById("txtDeg");
-            if(txtMaj.value === "" || txtName === "" || txtDeg === ""){
+            if(txtMaj.value === "" || txtName.value === "" || txtDeg.value === ""){
                 alert("비어있는 요소가 있습니다");
                 return;
             }
@@ -83,13 +83,16 @@
             tr.append(tdName);
             tr.append(tdDeg);
             tr.append(tdBtn);
+            
             txtMaj.value = '';
             txtName.value = '';
             txtDeg.value = '';
+
             var tbl = document.getElementById("tblList");
             tbl.getElementsByTagName("tbody")[0].append(tr);
         }
         function remove(target){
+            console.log(target);
             if(confirm('정말로 삭제할까요?')){
                 target.parentElement.parentElement.remove();
             }
