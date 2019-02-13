@@ -16,10 +16,28 @@
 - DOM 다루기
 - onclick
 
-## week 2  
+## week 2  -- 진행완료
 1. HTML + javascript 2
 - DOM 다루기 , this
 - event 객체
 2. Javascript 파일 나누기
 3. 외부 자바스크립트 사용하기
 
+## week 3
+1. 다른 언어와 다를 바 없는 자바스크립트
+- 데이터형 
+- 변수 선언, 초기화
+- 반복문, 조건문 
+- 함수 선언과 실행 
+2. 다른 언어와 차이 나는 자바스크립트
+- hoisting
+- this
+- new
+- prototype
+
+## week 4
+1. 자바스크립트로 비동기 통신
+2. promise 
+
+## week 5 
+1. 학교 공지사항 게시판을 베껴보자.
