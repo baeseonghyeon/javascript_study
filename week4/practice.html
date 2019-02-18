@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>hello</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script type='text/javascript' src='assets/practice.js'></script>
+
+    <style>
+        .mockup{
+            display:none;
+        }
+        body{
+            padding-top : 50px;
+        }
+        .btn-search{
+            margin-top:32px;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class='container'>
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="optCate">카테고리</label>
+                <select id="optCate" class="form-control">
+                    <option selected value=''>전체</option>
+                    <option value='수업'>수업</option>
+                    <option value='학적'>학적</option>
+                    <option value='등록'>등록</option>
+                    <option value='채플'>채플</option>
+                </select>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="optType">유형</label>
+                <select id="optType" class="form-control">
+                    <option value=''>전체</option>
+                    <option value='title'>제목</option>
+                    <option value='content'>내용</option>
+                </select>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="txtKeyword">검색어</label>
+                <input id='txtKeyword' text='text' class='form-control' placeholder='검색어를 입력하세요'/>
+            </div>
+            <div class="col-auto">
+                <button type="button" class="btn btn-primary btn-search" onclick="_BOARD.methods.ui.search()">검색</button>
+            </div>
+        </div>
+        <table id='tblBoard' class='table'>
+            <thead class='thead-dark'>
+                <tr>
+                    <th scope='col' class='text-center'>
+                        SEQ
+                    </th>
+                    <th scope='col' class='text-center'>
+                        카테고리
+                    </th>
+                    <th scope='col' class='text-center' style='width:50%'>
+                        제목
+                    </th>
+                    <th scope='col' class='text-center'>
+                        작성자
+                    </th>
+                    <th scope='col' class='text-center'>
+                        작성일
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        <nav aria-label="Page navigation example" style='display:none;'>
+            <ul class="pagination" id='pagination'>
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+
+        <div class='mockup'>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class='seq text-center'>
+                            SEQ
+                        </td>
+                        <td class='cate text-center'>
+                            카테고리
+                        </td>
+                        <td class='title'>
+                            <a class='link' href=''></a>
+                        </td>
+                        <td class='author text-center'>
+                            작성자
+                        </td>
+                        <td class='date text-center'>
+                            작성일
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+</body>
+
+</html>
