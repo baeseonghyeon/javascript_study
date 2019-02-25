@@ -18,7 +18,6 @@ var _BOARD = _BOARD || {
                     type : $('#optType').val(),
                     keyword : $('#txtKeyword').val()
                 },function(res){
-                    console.log(res);
                     _BOARD.methods.board.init(res.data.items);
                     _BOARD.methods.page.init(res.data.paging);
                 });

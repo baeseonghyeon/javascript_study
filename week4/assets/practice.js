@@ -1,3 +1,5 @@
+_BOARD.methods.ui.init();
+
 var _BOARD = _BOARD || {
     config : {
         url : 'http://syunoti.cafe24app.com/api/boards/get',
@@ -25,15 +27,24 @@ var _BOARD = _BOARD || {
             load : function(options , callback){
                 // 데이터를 가져오는 함수입니다. 
                 // jquery ajax함수는 여기서 사용합니다.
+
+                
             }
         }
     }
 }
 
+
+$.ajax = function(){
+    var result = {};
+    result.then = function(success, fail){
+
+    }
+    return result;
+}
+
 $(function(){
-    // _BOARD.methods._data.load({},function(res){
-    //     _BOARD.methods.ui.init();
-    //     _BOARD.methods.board.init(res.data.items);
-    //     _BOARD.methods.page.init(res.data.paging);
-    // });
+    _BOARD.methods._data.load({},function(res){
+       
+    });
 });
