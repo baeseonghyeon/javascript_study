@@ -146,10 +146,17 @@ var _BOARD = _BOARD || {
     }
 }
 
-$(function(){
+// $(function(){
+$(document).ready(function(){
     _BOARD.methods._data.load({},function(res){
         _BOARD.methods.ui.init();
         _BOARD.methods.board.init(res.data.items);
-        _BOARD.methods.page.init(res.data.paging);
+        // _BOARD.methods.page.init(res.data.paging);
     });
 });
+
+
+// 서버에 요청해서 그 결과를 게시판 형태의 table로 만들어라 
+
+// 1. 서버에 요청해서
+// 2. 그결과를 게시판형의 table로

@@ -1,0 +1,58 @@
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
+<script>
+// 서버에 요청해서 그 결과를 게시판 형태의 table로 만들어라 
+// 0. html이 완전히 로드되고 나면,
+// 1. 서버에 요청해서
+// 2. 그 결과를 게시판형의 table로
+
+$(document).ready(function(){
+    // 1. 서버에 요청해서
+    $.ajax({
+        url : 'http://syunoti.cafe24app.com/api/boards/get',
+        methods : 'get'
+    })
+    .then(function(res){
+        // 성공 
+        
+        // 2. 그 결과를 게시판 형의 table로 만들어라
+        // console.log(res.data.items);
+        for(var i = 0 ; i < res.data.items.length ; i++){
+            // console.log(res.data.items[i]);
+            var _item = res.data.items[i];
+            // seq / title / author
+            // console.log('############################');
+            // console.log('seq : ' + _item.seq);
+            // console.log('title : ' + _item.title);
+            // console.log('author : ' + _item.author);
+            var row = $('<tr><td class="seq"></td><td class="title"></td><td class="author"></td></tr>');
+            
+            row.find('.seq').text(_item.seq);
+            row.find('.title').text(_item.title);
+            row.find('.author').text(_item.author);
+
+            $('table').find('tbody').append(row);
+        }
+
+    } , function(res){
+        // 실패 
+        alert('뭔가 통신이 실패함');
+    });
+});
+
+</script>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>seq</th>
+                <th>title</th>
+                <th>author</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
